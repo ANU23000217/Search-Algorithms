@@ -20,28 +20,99 @@ To write a program to perform linear search and binary search using python progr
 i)	#Use a linear search method to match the item in a list.
 ```
 
+#Use a linear search method to match the item in a list.
+##Developed By: ANU RADHA N
+#Register Number : 212223230018
+
+def linearSearch(array,n,k):
+ for i in range(0,n):
+     if(array[i]==k):
+        return i
+ 1/5
+ return -1
+    
+array = eval(input())
+k=eval(input())
+n=len(array)
+array.sort()
+res=linearSearch(array,n,k)
+if(res==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",  res)
+
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
-
-
+#Find the element in a list using Binary Search(Iterative Method).
+#Developed By: ANU RADHA N
+#Register Number : 212223230018
+def binary(lst , n, low, high):
+    while low<=high:
+        mid = low+ (high -low)//2
+        if lst[mid]==n:
+            return mid
+        elif lst[mid]<n:
+            low = mid+1
+        else:
+            high = mid-1
+    return -1
+lst = eval(input())
+lst.sort()
+n=eval(input())
+result = binary(lst,n,0,len(lst)-1)
+if(result==-1):
+    print(lst)
+    print("Element not found")
+else:
+    print(lst)
+    print("Element found at index: " , result)
 
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+#Find the element in a list using Binary Search (recursive Method).
+#Developed By: ANU RADHA N
+#Register Number : 212223230018
+def binary(lst , n, low, high):
+    if low<=high:
+        mid = low+ (high -low)//2
+        if lst[mid]==n:
+            return mid
+        elif lst[mid]>n:
+            return binary(lst , n, low, mid-1)
+        else:
+             return binary(lst , n , mid+1, high)
+    else:
+        return -1
+lst = eval(input())
+lst.sort()
+n=eval(input())
+result = binary(lst,n,0,len(lst)-1)
+if(result==-1):
+    print(lst)
+    print("Element not found")
+else:
+    print(lst)
+    print("Element found at index: " , result)
 
 
 
 
 ```
-## Sample Input and Output
+## Sample Input and Output:
+
+![image](https://github.com/ANU23000217/Search-Algorithms/assets/139117108/16aed2a0-1f6d-4132-9aa8-8c7448279949)
 
 
+![image](https://github.com/ANU23000217/Search-Algorithms/assets/139117108/133853d7-24dc-4745-b244-b6ceb05a779c)
+
+![image](https://github.com/ANU23000217/Search-Algorithms/assets/139117108/3356346c-49de-4d1a-8786-2d8e39859250)
 
 
 
